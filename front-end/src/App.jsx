@@ -1,5 +1,5 @@
-function App() {
-  return <p>Witaj w sklepie</p>;
-}
+import { Layout } from "./components/Layout/Layout";
 
-export default App;
+export default function App() {
+  return <Layout />;
+}
