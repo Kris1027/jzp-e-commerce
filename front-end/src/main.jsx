@@ -4,12 +4,12 @@ import "./styles/globals.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Favourites } from "./views/Favourites/Favourites.jsx";
+import { Cart } from "./views/Cart/Cart";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Favourites />,
+    element: <Cart />,
   },
 ]);
 
