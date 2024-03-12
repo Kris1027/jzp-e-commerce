@@ -20,7 +20,7 @@ export function Details({ product }) {
     <div className={styles.details}>
       <h2>{product.brand}</h2>
       <p className={styles.productName}>{product.productName}</p>
-      <p className={styles.price}>{product.pricePLN}</p>
+      <p className={styles.price}>{product.pricePLN}zł</p>
 
       <FullWidthButton isBlack={true}>Dodaj do koszyka</FullWidthButton>
 
