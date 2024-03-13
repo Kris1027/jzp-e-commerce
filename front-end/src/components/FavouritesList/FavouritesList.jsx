@@ -8,8 +8,10 @@ export function FavouritesList({ favourites }) {
       <div className={styles.favouritesList}>
         <h2>Ulubione</h2>
         <div>
-          {favourites.map(({ product }) => {
-            return <FavouritesProduct key={product.id} product={product} />;
+          {favourites.map((favourite) => {
+            return (
+              <FavouritesProduct key={favourite.id} favourite={favourite} />
+            );
           })}
         </div>
       </div>
