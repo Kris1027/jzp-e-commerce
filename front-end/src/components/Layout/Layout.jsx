@@ -7,10 +7,17 @@ import { Logo } from "../Logo/Logo";
 import { MainContent } from "../MainContent/MainContent";
 import { MainMenu } from "../MainMenu/MainMenu";
 import { TopBar } from "../TopBar/TopBar";
+import { CURRENCIES } from "../../constants/currencies";
+import { useState } from "react";
+import { CurrencyContext } from "../../contexts/CurrencyContext";
 
 export function Layout() {
+  const [currency, setCurrency] = useState(
+    localStorage["selected_currency"] || CURRENCIES.PLN
+  );
+
   return (
-    <>
+    <CurrencyContext.Provider value={[currency, setCurrency]}>
       <MainContent>
         <TopBar>
           <MainMenu />
@@ -24,6 +31,6 @@ export function Layout() {
         <Outlet />
       </MainContent>
       <Footer />
-    </>
+    </CurrencyContext.Provider>
   );
 }
